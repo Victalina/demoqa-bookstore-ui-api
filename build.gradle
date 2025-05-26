@@ -52,7 +52,7 @@ tasks.withType(Test) {
     }
 }
 
-task rest_api_tests(type: Test) {
+task all_bookstore_tests(type: Test) {
     useJUnitPlatform {
         includeTags("all_bookstore_tests")
     }
