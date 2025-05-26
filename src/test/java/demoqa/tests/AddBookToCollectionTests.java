@@ -71,7 +71,7 @@ public class AddBookToCollectionTests extends TestBase {
                     .header("Authorization", "Bearer " + token)
                     .body(bookData)
                     .when()
-                    .post("/BookStore/v1/ResponseAddBookBooksModel")
+                    .post("/BookStore/v1/books")
                     .then()
                     .spec(responseSpecStatusCode(400))
                     .extract().as(ErrorResponseModel.class));
@@ -94,7 +94,7 @@ public class AddBookToCollectionTests extends TestBase {
                     .contentType(JSON)
                     .body(bookData)
                     .when()
-                    .post("/BookStore/v1/ResponseAddBookBooksModel")
+                    .post("/BookStore/v1/books")
                     .then()
                     .spec(responseSpecStatusCode(401))
                     .extract().as(ErrorResponseModel.class));
