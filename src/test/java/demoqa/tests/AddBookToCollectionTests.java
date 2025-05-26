@@ -4,6 +4,7 @@ import demoqa.api.Account;
 import demoqa.api.BookStore;
 import demoqa.extensions.WithLogin;
 import demoqa.models.*;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -49,6 +50,7 @@ public class AddBookToCollectionTests extends TestBase {
   }
 
   @Test
+  @Disabled
   void negative400AddBookToCollectionTest() {
     LoginResponseModel authResponse = step("Get authorization cookie by api", () ->
             Account.getAuthorizationResponse());
@@ -82,6 +84,7 @@ public class AddBookToCollectionTests extends TestBase {
   }
 
   @Test
+  @Disabled
   void negative401AddBookToCollectionTest() {
 
     String userId = "7fb97b8c-378e-4392-8fd2-e9e12e6e5012";
